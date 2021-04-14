@@ -25,7 +25,7 @@ namespace Remotely.Agent.Installer.Win.Services
         public event EventHandler<string> ProgressMessageChanged;
         public event EventHandler<int> ProgressValueChanged;
 
-        private string InstallPath => Path.Combine(Path.GetPathRoot(Environment.SystemDirectory), "Program Files", "Remotely");
+        private string InstallPath => Path.Combine(Path.GetPathRoot(Environment.SystemDirectory), "Program Files", "Inspector");
         private string Platform => Environment.Is64BitOperatingSystem ? "x64" : "x86";
         private JavaScriptSerializer Serializer { get; } = new JavaScriptSerializer();
         public async Task<bool> Install(string serverUrl,
